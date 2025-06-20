@@ -4,4 +4,4 @@
 
 cd kali-installer
 
-./build.sh --variant xfce --distribution kali-dev --version 1.0 --verbose
+./build.sh --variant xfce --distribution kali-dev --version 1.0 --get-image-path --verbose
