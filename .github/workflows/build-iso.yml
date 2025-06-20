@@ -32,3 +32,5 @@ jobs:
           name: kali-installer-iso
           path: |
             *.iso
+            kali-installer/images/*.iso
+            kali-installer/*.iso
