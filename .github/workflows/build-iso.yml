@@ -1,0 +1,34 @@
+name: Build Kali ISO
+
+on:
+  workflow_dispatch
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget curl git sudo
+
+      - name: Prepare build environment
+        run: |
+          chmod +x setup_env.sh
+          ./setup_env.sh
+
+      - name: Make build_iso.sh executable
+        run: chmod +x build_iso.sh
+
+      - name: Build ISO
+        run: ./build_iso.sh
+
+      - name: Upload ISO artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kali-installer-iso
+          path: |
+            *.iso
