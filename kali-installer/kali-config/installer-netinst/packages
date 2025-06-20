@@ -1,0 +1,22 @@
+## Network Installer image ("netinst")
+##   Mostly empty list because netinst has no embedded packages in theory
+##
+## $ ./build.sh --variant netinst
+
+## Installer images always want these
+kali-linux-firmware
+
+## Graphical desktop
+##   For the complete list see: https://www.kali.org/docs/general-use/metapackages/
+#N/A
+
+## Metapackages
+##   You can customize the set of Kali metapackages (groups of tools) available in the installer ISO
+##   For the complete list see: https://www.kali.org/tools/kali-meta/
+#N/A
+
+## Extra Kali packages/tools/applications
+##   For the complete list see: https://www.kali.org/tools/
+##                              https://pkg.kali.org/
+#<package>
+

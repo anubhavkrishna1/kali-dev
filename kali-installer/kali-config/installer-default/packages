@@ -1,0 +1,31 @@
+## Installer image - with "default"
+##   It should contain everything offered in tasksel during initial installation so all kali-linux-* except:
+##   - kali-linux-everything
+##   - kali-linux-large
+##   NOTE: We would like to provide kali-linux-large in our "default" installer images
+##         but we end up with ISO images that are too big for our CDN.
+##         So disable it for now.
+##
+## $ ./build.sh --variant default
+
+## Installer images always want these
+kali-linux-firmware
+
+## Graphical desktop
+##   For the complete list see: https://www.kali.org/docs/general-use/metapackages/
+kali-desktop-xfce
+kali-desktop-gnome
+kali-desktop-kde
+
+## Metapackages
+##   You can customize the set of Kali metapackages (groups of tools) available in the installer ISO
+##   For the complete list see: https://www.kali.org/tools/kali-meta/
+kali-linux-core
+kali-tools-top10
+kali-linux-default
+#kali-linux-large
+
+## Extra Kali packages/tools/applications
+##   For the complete list see: https://www.kali.org/tools/
+##                              https://pkg.kali.org/
+#<package>

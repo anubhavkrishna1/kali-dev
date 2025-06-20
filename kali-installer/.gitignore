@@ -1,0 +1,13 @@
+## Directories
+simple-cdd/images/*
+simple-cdd/tmp/*
+## Overwritten due to build.sh
+simple-cdd/debian-cd/*
+simple-cdd/profiles/kali.downloads
+## In case symlink, no slash
+images
+
+## Files
+.mirror
+build.log
+
