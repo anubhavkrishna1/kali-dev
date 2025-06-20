@@ -14,16 +14,11 @@ kali-linux-firmware
 ## Graphical desktop
 ##   For the complete list see: https://www.kali.org/docs/general-use/metapackages/
 kali-desktop-xfce
-kali-desktop-gnome
-kali-desktop-kde
 
 ## Metapackages
 ##   You can customize the set of Kali metapackages (groups of tools) available in the installer ISO
 ##   For the complete list see: https://www.kali.org/tools/kali-meta/
-kali-linux-core
-kali-tools-top10
-kali-linux-default
-#kali-linux-large
+
 
 ## Extra Kali packages/tools/applications
 ##   For the complete list see: https://www.kali.org/tools/
