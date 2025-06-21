@@ -6,7 +6,7 @@ set -e
 # This script sets up the environment for building Kali Linux images using live-build and debootstrap.
 # Update and upgrade package lists
 sudo apt update
-sudo apt full-upgrade -y
+# sudo apt full-upgrade -y
 
 # Download the Kali archive keyring and live-build .deb packages
 wget https://http.kali.org/pool/main/k/kali-archive-keyring/kali-archive-keyring_2025.1_all.deb
@@ -14,7 +14,7 @@ wget https://http.kali.org/pool/main/l/live-build/live-build_20250225+kali3_all.
 wget http://http.kali.org/pool/main/d/debian-cd/debian-cd_3.2.1+kali1_all.deb
 
 # Install required packages
-sudo apt install -y git live-build simple-cdd cdebootstrap curl
+sudo apt install -y git live-build simple-cdd cdebootstrap curl debootstrap distro-info
 
 # Install the downloaded .deb packages
 sudo dpkg -i kali-archive-keyring_2025.1_all.deb
@@ -32,5 +32,7 @@ cd /usr/share/debootstrap/scripts/
 sudo mv /tmp/kali .
 
 # Create a symlink for kali-rolling
-sudo ln -s kali kali-rolling
+if [ ! -e kali-rolling ]; then
+    sudo ln -s kali kali-rolling
+fi
 
