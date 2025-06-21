@@ -4,5 +4,5 @@
 
 cd kali-installer
 
-./build.sh --variant default --distribution kali-dev --version 1.0 --get-image-path --verbose
+./build.sh --variant default --distribution kali-dev --version 1.0 --verbose
 
